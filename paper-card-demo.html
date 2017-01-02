@@ -1,0 +1,39 @@
+<!-- import latest release version of all components from polygit -->
+<link rel="import" href="https://polygit.org/components/polymer/polymer.html">
+<link rel="import" href="card-element.html">
+
+
+
+<dom-module id="paper-card-demo">
+  <template>
+    <style>
+      :host {
+        font-family: sans-serif;
+      }
+    </style>
+
+    <card-element
+    heading="Schneider Heading"
+    image="https://schneider.com/image/marquee-new-home.jpg"
+    content="Whatever the day, wherever the challenge, count on Schneider for complete control over your freight so it arrives when, where and how you expect it."
+    link="https://schneider.com/home"
+    approved="thumb-down"></card-element>
+
+    <br><br>
+
+    <card-element
+    heading="Get a rate: Two easy, quick steps"
+    image="https://schneider.com/image/rate-inquiry-dual-content.jpg"
+    content="Let us help. See how far your transportation spend can take you with Schneider at the wheel."
+    link="https://schneider.com/get-a-rate"
+    approved="thumb-up"></card-element>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: "paper-card-demo",
+
+    });
+  </script>
+</dom-module>
