@@ -1,0 +1,45 @@
+<link rel="import" href="./bower_components/polymer/polymer.html">
+<link rel="import" href="./bower_components/paper-card/paper-card.html">
+<link rel="import" href="./bower_components/paper-icon-button/paper-icon-button-light.html">
+<link rel="import" href="./bower_components/iron-icons/iron-icons.html">
+
+<dom-module id="card-element">
+  <template>
+    <style>
+      .card {
+        --paper-card-header-color: white;
+      }
+
+      .card-content {
+        color: var(--paper-grey-600);
+      }
+
+      .link {
+        color: var(--google-blue-500);
+      }
+
+      thumb {
+        color: var(--paper-grey-600);
+      }
+    </style>
+    <paper-card class=card heading="[[heading]]" image="[[image]]" elevation=5>
+      <div class="card-content">[[content]]</div>
+
+      <div class="card-actions">
+        <a href="[[link]]" tabindex="-1">
+          <paper-icon-button icon="open-in-browser" class=link style="float:right"></paper-icon-button>
+        </a>
+        <thumb>
+          <iron-icon icon="[[approved]]"></iron-icon>
+        </thumb>
+
+      </div>
+    </paper-card>
+  </template>
+  <script>
+    Polymer({
+      is: 'card-element',
+
+    });
+  </script>
+</dom-module>
